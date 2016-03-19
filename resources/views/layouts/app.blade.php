@@ -40,7 +40,7 @@
 
                 <!-- Branding Image -->
                 <a href="{{ url('/') }}" class="pull-left"><img src="{{url('img/logo.png')}}"></a>
-                <a class="navbar-brand" style="margin-left:8px;" href="{{ url('/') }}">
+                <a class="navbar-brand" style="margin-left:5px;" href="{{ url('/') }}">
                     Alert Systems International
                 </a>
             </div>
