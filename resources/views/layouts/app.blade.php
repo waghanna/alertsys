@@ -26,16 +26,16 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                     <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar">Products</span>
-                    <span class="icon-bar">Services</span>
-                    <span class="icon-bar">Resources</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
 
                 <!-- Branding Image -->
@@ -47,7 +47,9 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/products') }}">Products</a></li>
+                    <li><a href="{{ url('/services') }}">Services</a></li>
+                    <li><a href="{{ url('/resources') }}">Resources</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
