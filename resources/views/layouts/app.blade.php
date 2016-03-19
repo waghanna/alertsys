@@ -40,7 +40,8 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                    <img src="url('img/logo.png')"/>
+                    Alert Systems
                 </a>
             </div>
 
