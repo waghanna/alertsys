@@ -48,7 +48,15 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/products') }}">Products</a></li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="{{ url('/products') }}">Products</a>
+                        <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">categ 1</a>
+                            <a href="#">categ 2</a>
+                        </li>
+                        </ul>
+                    </li>
                     <li><a href="{{ url('/services') }}">Services</a></li>
                     <li><a href="{{ url('/resources') }}">Resources</a></li>
                 </ul>
