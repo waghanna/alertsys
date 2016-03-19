@@ -74,7 +74,7 @@
             </div>
         </div>
     </nav>
-{{url('img/logo.png')}}
+
     @yield('content')
 
     <!-- JavaScripts -->
