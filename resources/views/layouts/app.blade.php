@@ -33,9 +33,9 @@
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                     <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="icon-bar">Products</span>
+                    <span class="icon-bar">Services</span>
+                    <span class="icon-bar">Resources</span>
                 </button>
 
                 <!-- Branding Image -->
