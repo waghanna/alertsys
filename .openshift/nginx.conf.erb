@@ -42,7 +42,6 @@ server {
       try_files $uri =404;
       fastcgi_pass   unix:<%= ENV['OPENSHIFT_DATA_DIR'] %>hhvm.sock;
       fastcgi_index  index.php;
-      include        openshift_params;
 
       # uncomment to export all environment variables to fastcgi
       #include        <%= ENV['OPENSHIFT_REPO_DIR'] %>/config/nginx.d/export_env;
