@@ -39,7 +39,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a href="{{ url('/') }}" class="pull-left"><img src="url('img/logo.png')"></a>
+                <a href="{{ url('/') }}" class="pull-left"><img src="{{url('img/logo.png')}}"></a>
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Alert Systems
                 </a>
