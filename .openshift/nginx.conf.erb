@@ -29,8 +29,22 @@ gzip_vary           on;
 server {
     listen  <%= ENV['OPENSHIFT_NGINX_IP'] %>:<%= ENV['OPENSHIFT_NGINX_PORT'] %>;
     root    <%= ENV['OPENSHIFT_REPO_DIR'] %>/public;
+    index   index.php index.html index.htm <%= ENV['NGINX_EXTRA_INDEX'] %>;
 
+    # avoid unnecessary log
+    location = /favicon.ico {
+      access_log off;
+      log_not_found off;
+    }
+
+    location = /robots.txt {
+      access_log off;
+      log_not_found off;
+    }
+
+    # Handle any other URI
     location / {
-        index  index.html index.htm;
+    #    try_files $uri $uri/ =404;
+      try_files $uri $uri/ /index.php?$query_string;
     }
 }
