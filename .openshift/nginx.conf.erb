@@ -52,7 +52,7 @@ server {
         deny all;
     }
 
-    location ~ .(css|images|js)/(.+)$ {
+    location ~ .(css|img|js)/(.+)$ {
       try_files $uri $uri/ /$1/$2;
     }
 }
