@@ -14,11 +14,11 @@ class ContactController extends Controller
 	        'name' => 'required',
 	        'message' => 'required']);
 		$input = $request->all();
-		if ($validator->fails())
+		if ($validator->fails()){
 			return redirect()->back()
 						->withErrors($validator)
                         ->withInput();
-
+		}
         else{
 			\Mail::send('emails.contact', 
 				[
@@ -31,9 +31,17 @@ class ContactController extends Controller
 				],
 				function($message){
 		            $message->from('sales@alertsystems.ca');
-		            $message->to('wagdy.hanna@gmail.com','ALERT-SYSTEMS-SALES');
-		            $message->subject('ALERT SYSTEMS MESSAGE');
+		            $message->to('sales@alertsystems.ca','ALERT-SYSTEMS');
+		            $message->subject('ALERT SYSTEMS INQUIRY');
 		        });
+			
+			$auto_reply = "Thank you for contacting Alert Systems International.\r\nOne of our associates will be contacting you shortly.\r\nBest Regards,\r\nSales Team at Alert Systems International";
+			\Mail::raw($auto_reply, function($message) use ($request) {
+				$message->to($request->get('email'))
+						->from('sales@alertsystems.ca')
+						->subject('[Auto-Reply] Your message was received');
+				});
+
         	return redirect()->back()
 				->with('success', 'Thanks for contacting us!')
 				->withInput();

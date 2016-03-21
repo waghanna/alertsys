@@ -1,5 +1,4 @@
-<p>You received a message from the Alert Systems website.</p>
-<p>From <a href="{{$page}}">{{$page}}</a> page.</p>
+<p>From <a href="{{$page}}">{{$page}}</a>.</p>
 
 <label>Name:</label> {{ $name }}<br>
 
