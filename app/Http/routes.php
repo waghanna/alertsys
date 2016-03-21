@@ -15,20 +15,21 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('product/{group}', function ($group) {
-    return view('product')->with(compact('group'));
-});
-
-Route::get('products', function () {
-    return view('products');
-});
-
 Route::group(['middleware' => 'web'], function () {
-	Route::get('contact', function ($result=null) {
-	    return view('contact')->with('result', $result);
+	
+	Route::get('contact', function (){
+	    return view('contact');
 	});
+	
 	Route::post('contact_form', 'ContactController@post_contact_form');
+	
+	Route::get('products', function () {
+	    return view('products');
+	});
 
+	Route::get('product/{group}', function ($group) {
+	    return view('product')->with(compact('group'));
+	});
 });
 
 Route::get('resources', function () {

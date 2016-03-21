@@ -9,12 +9,14 @@
 		@if (Session::has('success'))
 		    <div class="alert alert-success"><em>{{Session::get('success')}}</em></div>
 		@endif
-		@if($errors->any())
-	      <ul style="list-style-type:none" class="alert alert-danger">
-	        @foreach($errors->all() as $error)
-	          <li>{{$error}}</li>
-	        @endforeach
-	      </ul>
+		@if(isset($errors))
+			@if($errors->any())
+				<ul style="list-style-type:none" class="alert alert-danger">
+					@foreach($errors->all() as $error)
+						<li>{{$error}}</li>
+					@endforeach
+				</ul>
+			@endif
 		@endif
 		{!! Form::open(['url' => 'contact_form', 'class' => 'form']) !!}
 		
