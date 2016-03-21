@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Alert Systems International</title>
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
@@ -13,17 +13,8 @@
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Lato';
-        }
-
-        .fa-btn {
-            margin-right: 6px;
-        }
-    </style>
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-inverse navbar-static-top">
@@ -39,9 +30,9 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a href="{{ url('/') }}" class="pull-left"><img src="{{url('img/logo.png')}}"></a>
-                <a class="navbar-brand" style="margin-left:3px;" href="{{ url('/') }}">
-                    Alert Systems International
+                <a href="{{ url('/') }}" class="pull-left"><img src="{{url('img/logo.png')}}" style="padding:5px;"></a>
+                <a class="navbar-brand" style="margin-left:5px;margin-right:100px;" href="{{ url('/') }}">
+                    <strong>Alert Systems International</strong>
                 </a>
             </div>
 
@@ -49,55 +40,38 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="{{ url('/products') }}">Products</a>
+                        <a data-toggle="dropdown" class="dropdown-toggle disabled" href="{{ url('products') }}">Products <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                         <li>
-                            <a href="#">categ 1</a>
-                            <a href="#">categ 2</a>
+                            @foreach(Config::get('config.products') as $group=>$value)
+                                <a href="{{url('product', $group)}}">{{$group}}</a>
+                            @endforeach
                         </li>
                         </ul>
                     </li>
-                    <li><a href="{{ url('/services') }}">Services</a></li>
-                    <li><a href="{{ url('/resources') }}">Resources</a></li>
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <!-- <li><a href="{{ url('/login') }}">Login</a></li> -->
-                        <!-- <li><a href="{{ url('/register') }}">Register</a></li> -->
-                    @else
-                        <!-- <li class="dropdown"> -->
-                            <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> -->
-                                <!-- {{-- Auth::user()->name --}} <span class="caret"></span> -->
-                            <!-- </a> -->
-
-                            <!-- <ul class="dropdown-menu" role="menu"> -->
-                                <!-- <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li> -->
-                            <!-- </ul> -->
-                        <!-- </li> -->
-                    @endif
+                    <li><a href="{{ url('resources') }}">Resources</a></li>
+                    <li><a href="{{ url('contact') }}">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    
+    <a href="#" class="back-to-top">Back to Top</a>
 
     @yield('content')
-
+    
+    <div class="navbar navbar-inverse footer-text">
+        <div class="container">
+            <br>
+            <div class="text-center footer-text">Copyright 2016 Alert Systems International - All rights reserved</div>
+            <div class="text-center footer-text"><a href="{{url('products')}}">Products</a> | <a href="{{url('resources')}}">Resources</a> | <a href="{{url('contact')}}">Contact</a></div>
+            <br>
+        </div>
+    </div>
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
-    <script type="text/javascript">
-        $(function(){
-            $('.dropdown').hover(function() {
-                $(this).addClass('open');
-            },
-            function() {
-                $(this).removeClass('open');
-            });
-        });
-    </script>
+    <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>

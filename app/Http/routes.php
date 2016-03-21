@@ -12,7 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('product/{group}', function ($group) {
+    return view('product')->with(compact('group'));
+});
+
+Route::get('products', function () {
+    return view('products');
+});
+
+Route::get('contact', function () {
+    return view('contact');
+});
+
+Route::get('resources', function () {
+    return view('resources');
 });
 
 /*
@@ -25,10 +41,6 @@ Route::get('/', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-
-Route::group(['middleware' => ['web']], function () {
-    Route::auth();
-});
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
