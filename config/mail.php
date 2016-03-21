@@ -55,7 +55,8 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'postmaster@sandbox7bd58ef6cbda427cbb228e0da4184c2e.mailgun.org', 'name' => 'admin'],
+
 
     /*
     |--------------------------------------------------------------------------

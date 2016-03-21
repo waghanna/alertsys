@@ -36,7 +36,7 @@
 			@endforeach
         </div>
         <div class="col-md-4">
-            @include ('contact_form', ['style' => 'quote'])
+            @include ('contact_form')
         </div>
     </div>
 </div>

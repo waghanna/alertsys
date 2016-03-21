@@ -23,8 +23,12 @@ Route::get('products', function () {
     return view('products');
 });
 
-Route::get('contact', function () {
-    return view('contact');
+Route::group(['middleware' => 'web'], function () {
+	Route::get('contact', function ($result=null) {
+	    return view('contact')->with('result', $result);
+	});
+	Route::post('contact_form', 'ContactController@post_contact_form');
+
 });
 
 Route::get('resources', function () {
@@ -42,8 +46,8 @@ Route::get('resources', function () {
 |
 */
 
-Route::group(['middleware' => 'web'], function () {
-    Route::auth();
+// Route::group(['middleware' => 'web'], function () {
+//     Route::auth();
 
-    Route::get('/home', 'HomeController@index');
-});
+//     Route::get('/home', 'HomeController@index');
+// });

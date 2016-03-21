@@ -27,4 +27,10 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')
         //          ->hourly();
     }
+    
+    protected $middleware = [
+            //...
+        \Illuminate\Session\Middleware\StartSession::class,
+        \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+    ];
 }

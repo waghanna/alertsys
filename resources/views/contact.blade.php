@@ -20,7 +20,7 @@
 			</div>
             <div class="col-md-6">
             <h3></h3>
-	            @include ('contact_form', ['style' => 'contact'])
+	            @include ('contact_form')
             </div>
 
         </div>

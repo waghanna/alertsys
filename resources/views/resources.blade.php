@@ -28,6 +28,13 @@
 		<a href="{{url('img/PRODUCT PACKAGES.pdf')}}">click here to
 		download the PDF file.</a></p>  
 	</object>
+
+    <h3 class="page-header resource-title">Full Products List</h3>
+    <object data="{{url('img/PRODUCTS - ALERT SYSTEMS.pdf')}}" type="application/pdf" width="100%" height="2300px"> 
+		<p>It appears you don't have a PDF plugin for this browser.
+		<a href="{{url('img/PRODUCTS - ALERT SYSTEMS.pdf')}}">click here to
+		download the PDF file.</a></p>  
+	</object>
 </div>
 
 @endsection

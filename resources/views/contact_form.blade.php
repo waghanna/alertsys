@@ -1,40 +1,42 @@
-<?php
-	$panel_style = $style == 'quote' ? 'panel-info' : 'panel-warning';
-	$panel_title = $style == 'quote' ? 'Request a Quote or Send an Inquiry' : 'Contact Form';
-?>
-<div class="panel {{$panel_style}}">
+
+<div class="panel panel-warning">
 
 	<div class="panel-heading text-center">
-		<h4><strong>{{$panel_title}}</strong></h4>
+		<h4><strong>Request a Quote or Send an Inquiry</strong></h4>
 	</div>
 
 	<div class="panel-body">
-		{!! Form::open(['url' => ['contact']]) !!}
+		@if (Session::has('success'))
+		    <div class="alert alert-success"><em>{{Session::get('success')}}</em></div>
+		@endif
+		@if($errors->any())
+	      <ul style="list-style-type:none" class="alert alert-danger">
+	        @foreach($errors->all() as $error)
+	          <li>{{$error}}</li>
+	        @endforeach
+	      </ul>
+		@endif
+		{!! Form::open(['url' => 'contact_form', 'class' => 'form']) !!}
+		
+		{!! Form::hidden('location', null, ['id'=>'location']) !!}
 
 		{!! Form::label('name', 'Name:', ['class' => 'control-label']) !!}
-		{!! Form::text('name', null, ['class' => 'form-control']) !!}
+		{!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
 
 		{!! Form::label('email', 'Email:', ['class' => 'control-label']) !!}
-		{!! Form::text('email', null, ['class' => 'form-control']) !!}
+		{!! Form::text('email', old('email'), ['class' => 'form-control']) !!}
 
 		{!! Form::label('phone', 'Phone:', ['class' => 'control-label']) !!}
-		{!! Form::text('phone', null, ['class' => 'form-control']) !!}
+		{!! Form::text('phone', old('phone'), ['class' => 'form-control']) !!}
 
 		{!! Form::label('company', 'Company:', ['class' => 'control-label']) !!}
-		{!! Form::text('company', null, ['class' => 'form-control']) !!}
+		{!! Form::text('company', old('company'), ['class' => 'form-control']) !!}
 
-		{!! Form::label('Message', 'Message:', ['class' => 'control-label']) !!}
-		{!! Form::textarea('Message', null, ['rows'=>4, 'class' => 'form-control']) !!}
+		{!! Form::label('message', 'Message:', ['class' => 'control-label']) !!}
+		{!! Form::textarea('message', old('message'), ['rows'=>4, 'class' => 'form-control']) !!}
 		<br>
 		<div class="col-md-8 col-md-offset-2">
-			<?php
-				if ($style == 'contact'){
-					echo '<button class = "form-control btn btn-warning">Send Message</button>';
-				}
-				else{
-					echo '<button class = "form-control btn btn-primary">Send Message</button>';
-				}
-			?>			
+			{!! Form::submit('Send Message', ['class' => 'btn btn-warning form-control']) !!}
 		</div>
 		{!! Form::close() !!}
 	</div>
