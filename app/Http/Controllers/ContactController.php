@@ -20,7 +20,7 @@ class ContactController extends Controller
                         ->withInput();
 
         else{
-			Mail::send('emails.contact', 
+			\Mail::send('emails.contact', 
 				[
 					'name'=>$request->get('name'),
 					'email'=>$request->get('email'),
