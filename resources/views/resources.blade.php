@@ -6,7 +6,7 @@
     <h3 class="page-header resource-title">Standard Rig Safety Application</h3>
     <object data="Brochure - Standard Rig Safety.pdf" type="application/pdf" width="100%" height="750px"> 
 		<p>It appears you don't have a PDF plugin for this browser.
-		<a href="Brochure - Standard Rig Safety.pdf">click here to
+		<a href="{{url('Brochure - Standard Rig Safety.pdf')}}">click here to
 		download the PDF file.</a></p>  
 	</object>
 
