@@ -1,5 +1,5 @@
 
-<div class="panel panel-warning">
+<div class="panel panel-success">
 
 	<div class="panel-heading text-center">
 		<h4><strong>Request a Quote or Send an Inquiry</strong></h4>
@@ -38,7 +38,7 @@
 		{!! Form::textarea('message', old('message'), ['rows'=>4, 'class' => 'form-control']) !!}
 		<br>
 		<div class="col-md-8 col-md-offset-2">
-			{!! Form::submit('Send Message', ['class' => 'btn btn-warning form-control']) !!}
+			{!! Form::submit('Send Message', ['class' => 'btn btn-success form-control']) !!}
 		</div>
 		{!! Form::close() !!}
 	</div>

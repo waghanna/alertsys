@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-12">
             @foreach(Config::get('config.products')[$group]['items'] as $name=>$value)
                 <div class="col-md-4">
                     <div class="thumbnail product-group-block">
