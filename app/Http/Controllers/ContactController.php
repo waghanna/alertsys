@@ -31,7 +31,7 @@ class ContactController extends Controller
 			],
 			function($message){
 	            $message->from('sales@alertsystems.ca');
-	            $message->to('sales@alertsystems.ca','ALERT-SYSTEMS-SALES');
+	            $message->to('wagdy.hanna@gmail.com','ALERT-SYSTEMS-SALES');
 	            $message->subject('ALERT SYSTEMS MESSAGE');
 	        });
         	return redirect()->back()
