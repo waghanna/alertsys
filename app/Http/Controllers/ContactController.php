@@ -19,24 +19,24 @@ class ContactController extends Controller
 						->withErrors($validator)
                         ->withInput();
 
-        else
-		Mail::send('emails.contact', 
-			[
-				'name'=>$request->get('name'),
-				'email'=>$request->get('email'),
-				'phone'=>$request->get('phone'),
-				'company'=>$request->get('company'),
-				'user_message'=>$request->get('message'),
-				'page'=>$request->get('location')
-			],
-			function($message){
-	            $message->from('sales@alertsystems.ca');
-	            $message->to('wagdy.hanna@gmail.com','ALERT-SYSTEMS-SALES');
-	            $message->subject('ALERT SYSTEMS MESSAGE');
-	        });
+        else{
+			Mail::send('emails.contact', 
+				[
+					'name'=>$request->get('name'),
+					'email'=>$request->get('email'),
+					'phone'=>$request->get('phone'),
+					'company'=>$request->get('company'),
+					'user_message'=>$request->get('message'),
+					'page'=>$request->get('location')
+				],
+				function($message){
+		            $message->from('sales@alertsystems.ca');
+		            $message->to('wagdy.hanna@gmail.com','ALERT-SYSTEMS-SALES');
+		            $message->subject('ALERT SYSTEMS MESSAGE');
+		        });
         	return redirect()->back()
-						->with('success', 'Thanks for contacting us!')
-						->withInput();
-                        
+				->with('success', 'Thanks for contacting us!')
+				->withInput();
+		}
 	}
 }
