@@ -70,8 +70,6 @@ a:hover.back-to-top {
 }
 .home-img-overlay{
     position: relative;
-    top:-350px;
-    left:80px;
     max-width: 360px;
     background-color: rgba(0,0,0, 0.5);
     border-radius:5px;
@@ -91,7 +89,7 @@ a:hover.back-to-top {
 }
 .home-adjust-position{
     position: relative;
-    top: -50px;
+    top: -100px;
 }
 .home-img-subtext h3{
     color: red;
@@ -103,6 +101,30 @@ a:hover.back-to-top {
     height: 60px;
     color: red;
     font-weight: bold;
+    border-bottom: 1px solid #aaa;
+}
+.product-group-block>a:hover{
+    text-decoration: none;
+}
+.product-group-block>ul>li>a:hover{
+    text-decoration: none;
+    background-color: yellow;
+}
+.product-img{
+  height: 200px;
+}
+.product-img>img{
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+}
+.product-img>img:hover{
+    opacity: 1;
+}
+
+.product-item-img>img{
+    width: 70%;
+    margin: auto;
 }
 .product-item-heading{
     font-weight: bold;

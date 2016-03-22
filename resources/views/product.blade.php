@@ -9,7 +9,9 @@
                     <div class="thumbnail product-group-block">
                         <a href="{{'#'.$name}}">
                             <div class="product-img-title">{{$name}}</div>
-                            <img src="{{url($value['image'])}}">
+                            <div class="product-img">
+                                <img src="{{url($value['image'])}}">
+                            </div>
                         </a>
                     </div>
                 </div>

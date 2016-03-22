@@ -2,11 +2,11 @@
 
 return [
     'products' => [
-        "Advanced Controls and Telemetry" => [
-        	'image' => 'img/logo.png',
+        "Advanced Controls" => [
+        	'image' => 'img/20465394070_941a9df6f6_b.jpg',
         	'items' => [
         		'Operators Display' => [
-	        		'image' => 'img/logo.png',
+	        		'image' => 'img/placeholder.jpg',
 	        		'description' => 'DESCRIPTION',
 	        		'specification' => [
 	        			'Industrial touch-screen mounted on adjustable swivel ram-mount',
@@ -22,7 +22,7 @@ return [
 	        		]
         		],
         		'Simple Digital Display' => [
-	        		'image' => 'img/logo.png',
+	        		'image' => 'img/placeholder.jpg',
 	        		'description' => 'DESCRIPTION',
 	        		'specification' => [
         				'Hardwired to local 12v/24v power',
@@ -35,7 +35,7 @@ return [
 	        		]
         		],
         		'Wireless Communication Module' => [
-	        		'image' => 'img/logo.png',
+	        		'image' => 'img/placeholder.jpg',
 	        		'description' => 'DESCRIPTION',
 	        		'specification' => [
 	        			'Wireless communication link 2.4GHz with measurement devices and controls', 
@@ -49,10 +49,10 @@ return [
         	]
         ],
         "Wireless Safety System" => [
-        	'image' => 'img/logo.png',
+        	'image' => 'img/safety.jpg',
         	'items' => [
         		'Wireless Safety Controller' => [
-	        		'image' => 'img/logo.png',
+	        		'image' => 'img/placeholder.jpg',
 	        		'description' => 'DESCRIPTION',
 	        		'specification' => [
 	        			'Expandable up to 32 I/O modules',
@@ -64,7 +64,7 @@ return [
 	        		]
         		],
         		'Wireless Brake Control Module' => [
-	        		'image' => 'img/logo.png',
+	        		'image' => 'img/placeholder.jpg',
 	        		'description' => 'DESCRIPTION',
 	        		'specification' => [
 	        			'Available for pneumatic and hydraulic rigs (e.g., band brake actuation and hydraulic dump valves)',
@@ -74,7 +74,7 @@ return [
 	        		]
         		],
         		'Wireless Emergency Kill Switch' => [
-	        		'image' => 'img/logo.png',
+	        		'image' => 'img/placeholder.jpg',
 	        		'description' => 'DESCRIPTION',
 	        		'specification' => [
 	        			'High reliability interlock switch', 
@@ -86,7 +86,7 @@ return [
 	        		]
         		],
         		'Wireless Mechanical Crown Saver Switch' => [
-	        		'image' => 'img/logo.png',
+	        		'image' => 'img/placeholder.jpg',
 	        		'description' => 'DESCRIPTION',
 	        		'specification' => [
 	        			'Rugged aluminum and alloy steel fixture for extended life',
@@ -96,7 +96,7 @@ return [
 	        		]
         		],
         		'Wireless Multizone Crown Saver' => [
-	        		'image' => 'img/logo.png',
+	        		'image' => 'img/placeholder.jpg',
 	        		'description' => 'DESCRIPTION',
 	        		'specification' => [
 	        			'Rugged aluminum and alloy steel fixture for extended life',
@@ -109,7 +109,7 @@ return [
 	        		]
         		],
         		'Wireless Siren Alarm with Strobe Light' => [
-	        		'image' => 'img/logo.png',
+	        		'image' => 'img/placeholder.jpg',
 	        		'description' => 'DESCRIPTION',
 	        		'specification' => [
 	        			'Hardwired to local 12V/24V power',
@@ -120,10 +120,10 @@ return [
         	]
         ],
         "Measurement and Monitoring" => [
-        	'image' => 'img/logo.png',
+        	'image' => 'img/wellpore_pressure.png',
         	'items' => [
         		'Weight Indicator' => [
-	        		'image' => 'img/logo.png',
+	        		'image' => 'img/placeholder.jpg',
 	        		'description' => 'DESCRIPTION',
 	        		'specification' => [
 	        			'Up to 50,000 LB capacity',
@@ -137,7 +137,7 @@ return [
 	        		]
         		],
         		'Digital Revolution Encoder' => [
-	        		'image' => 'img/logo.png',
+	        		'image' => 'img/placeholder.jpg',
 	        		'description' => 'DESCRIPTION',
 	        		'specification' => [
 	        			'Dynapar HS35 series or similar',
@@ -148,7 +148,7 @@ return [
 	        		]
         		],
         		'Pump Flow Meter' => [
-	        		'image' => 'img/logo.png',
+	        		'image' => 'img/placeholder.jpg',
 	        		'description' => 'DESCRIPTION',
 	        		'specification' => [
 	        			'GPI FLOMEC model G2 or equivalent',
@@ -159,7 +159,7 @@ return [
 	        		]
         		],
         		'Pump / Accumulator Pressure Sensor' => [
-	        		'image' => 'img/logo.png',
+	        		'image' => 'img/placeholder.jpg',
 	        		'description' => 'DESCRIPTION',
 	        		'specification' => [
 	        			'VIATRAN model 34A OR HONEYWELL model 440 or equivalent',
@@ -168,7 +168,7 @@ return [
 	        		]
         		],
         		'Wellhead Pressure Sensor' => [
-	        		'image' => 'img/logo.png',
+	        		'image' => 'img/placeholder.jpg',
 	        		'description' => 'DESCRIPTION',
 	        		'specification' => [
 	        			'VIATRAN model 509 or Honeywell model 425 or equivalent',
@@ -178,7 +178,7 @@ return [
 	        		]
         		],
         		'Tank Level Sensor' => [
-	        		'image' => 'img/logo.png',
+	        		'image' => 'img/placeholder.jpg',
 	        		'description' => 'DESCRIPTION',
 	        		'specification' => [
 	        			'Multiple technologies available incl. laser, ultrasonic, hydrostatic head, and floats',
@@ -186,7 +186,7 @@ return [
 	        		]
         		],
         		'B.O.P. Ram Sensor' => [
-	        		'image' => 'img/logo.png',
+	        		'image' => 'img/placeholder.jpg',
 	        		'description' => 'DESCRIPTION',
 	        		'specification' => [
 	        			'Hardwired to local 12V/24V power',

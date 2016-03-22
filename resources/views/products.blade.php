@@ -9,8 +9,9 @@
                     <div class="thumbnail product-group-block">
                         <a href="{{url('product', $name)}}">
                             <div class="product-img-title">{{$name}}</div>
-                            <img class="thumbnail" src="{{url($value['image'])}}">
+                            <div class="product-img"><img src="{{url($value['image'])}}"></div>
                         </a>
+                        <br>
                         <ul style="height:200px;">
 				            @foreach(Config::get('config.products')[$name]['items'] as $name=>$value)
 				            	<li><a href="{{'#'.$name}}">{{$name}}</a></li>

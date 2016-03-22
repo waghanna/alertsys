@@ -12,7 +12,9 @@ $(function(){
         }, 700);
         return false;
     });
-    document.getElementById('location').value = location.href;
+    var loc = document.getElementById('location');
+    if (loc)
+        loc.value = location.href;
 });
 
 var amountScrolled = 200;
