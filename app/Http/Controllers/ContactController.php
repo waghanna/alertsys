@@ -30,8 +30,9 @@ class ContactController extends Controller
 					'page'=>$request->get('location')
 				],
 				function($message){
+					$recipients = ['sales@alertsystems.ca', 'wagdy.hanna@gmail.com'];
 		            $message->from('sales@alertsystems.ca');
-		            $message->to('sales@alertsystems.ca','ALERT-SYSTEMS');
+		            $message->to($recipients);
 		            $message->subject('ALERT SYSTEMS INQUIRY');
 		        });
 			
