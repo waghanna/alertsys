@@ -85,10 +85,13 @@ a:hover.back-to-top {
     margin: 20px 30px;
 }
 .home-text{
-    font-style: italic;
     font-size: 20px;
 }
-.home-text h3{
+.home-text-title{
+    font-style: italic;
+    text-align: center;
+}
+.home-text-title h3{
     color: red;
     font-weight: bold;
 }
