@@ -16,3 +16,10 @@ elixir(function(mix) {
 	mix.browserify('app.js');
 	mix.browserify('home.js');
 });
+
+elixir.config.js.browserify.watchify = {
+    enabled: true,
+    options: {
+        poll: true
+    }
+}
