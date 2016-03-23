@@ -7,7 +7,7 @@ return [
         	'items' => [
         		'Operators Display' => [
 	        		'image' => 'img/placeholder.png',
-	        		'description' => 'DESCRIPTION',
+	        		'description' => '',
 	        		'specification' => [
 	        			'Industrial touch-screen mounted on adjustable swivel ram-mount',
 						'20” to 50” display',
@@ -23,7 +23,7 @@ return [
         		],
         		'Simple Digital Display' => [
 	        		'image' => 'img/placeholder.png',
-	        		'description' => 'DESCRIPTION',
+	        		'description' => '',
 	        		'specification' => [
         				'Hardwired to local 12v/24v power',
 						'4” to 20” display sizes',
@@ -36,7 +36,7 @@ return [
         		],
         		'Wireless Communication Module' => [
 	        		'image' => 'img/placeholder.png',
-	        		'description' => 'DESCRIPTION',
+	        		'description' => '',
 	        		'specification' => [
 	        			'Wireless communication link 2.4GHz with measurement devices and controls', 
 	        			'Local storage data logging, options available include SD / uSD, flash, and RAID disks',
@@ -53,7 +53,7 @@ return [
         	'items' => [
         		'Wireless Safety Controller' => [
 	        		'image' => 'img/placeholder.png',
-	        		'description' => 'DESCRIPTION',
+	        		'description' => 'The Safety Controller unit provides the primary control logic for the anti-collision and safety functions. The unit continuously tracks all measurement signals from wired and wireless modules and instantly activates the brakes if any safety limits are exceeded. The system offers many customization options for easy integrations, including alarms for an early warning signal, disengaging the hoist clutch to slow down moving equipment when approaching safety zone limits, and a wide range of industrial interfaces for pneumatic and hydraulic braking systems, load-cells, dump valves, control panels, etc. An over-ride switch enables easy maintenance with automatic re-activation, and activity based data logging for troubleshooting and reporting. A wireless data-link offers advanced telemetry and secure configuration from any mobile device such as a tablet or laptop/computer.',
 	        		'specification' => [
 	        			'Expandable up to 32 I/O modules',
 	        			'Programmable CPU safety logic',
@@ -65,7 +65,7 @@ return [
         		],
         		'Wireless Brake Control Module' => [
 	        		'image' => 'img/placeholder.png',
-	        		'description' => 'DESCRIPTION',
+	        		'description' => '',
 	        		'specification' => [
 	        			'Available for pneumatic and hydraulic rigs (e.g., band brake actuation and hydraulic dump valves)',
 						'Redundant failsafe control valve mechanism',
@@ -75,7 +75,7 @@ return [
         		],
         		'Wireless Emergency Kill Switch' => [
 	        		'image' => 'img/placeholder.png',
-	        		'description' => 'DESCRIPTION',
+	        		'description' => '',
 	        		'specification' => [
 	        			'High reliability interlock switch', 
 	        			'Designed for safety critical applications', 
@@ -87,7 +87,7 @@ return [
         		],
         		'Wireless Mechanical Crown Saver Switch' => [
 	        		'image' => 'img/placeholder.png',
-	        		'description' => 'DESCRIPTION',
+	        		'description' => 'The Crown Saver unit provides an anti-collision zone management function preventing the blocks from striking the crown structure. A counter weight is suspended by a length of chain that establishes the crown safety zone limit. The unit is easy to install with no power or signaling cables, integrating advanced wireless data-link and long life batteries for a maintenance free operation.',
 	        		'specification' => [
 	        			'Rugged aluminum and alloy steel fixture for extended life',
 						'Single point alarm condition set by chain counterweight length',
@@ -97,7 +97,7 @@ return [
         		],
         		'Wireless Multizone Crown Saver' => [
 	        		'image' => 'img/placeholder.png',
-	        		'description' => 'DESCRIPTION',
+	        		'description' => '',
 	        		'specification' => [
 	        			'Rugged aluminum and alloy steel fixture for extended life',
 						'LIDAR based proximity sensing',
@@ -110,7 +110,7 @@ return [
         		],
         		'Wireless Siren Alarm with Strobe Light' => [
 	        		'image' => 'img/placeholder.png',
-	        		'description' => 'DESCRIPTION',
+	        		'description' => '',
 	        		'specification' => [
 	        			'Hardwired to local 12V/24V power',
 						'Range of up to 400 ft. from safety controller',
@@ -124,7 +124,7 @@ return [
         	'items' => [
         		'Weight Indicator' => [
 	        		'image' => 'img/placeholder.png',
-	        		'description' => 'DESCRIPTION',
+	        		'description' => '',
 	        		'specification' => [
 	        			'Up to 50,000 LB capacity',
 	        			'Includes a 12" digital or analog dial indicator',
@@ -138,7 +138,7 @@ return [
         		],
         		'Digital Revolution Encoder' => [
 	        		'image' => 'img/placeholder.png',
-	        		'description' => 'DESCRIPTION',
+	        		'description' => 'The Digital Revolution Encoder unit monitors the moving block position by tracking the draw-works revolutions and using advanced calibration tables for accurate measurements. The unit can serve as an advanced Floor Saver function by signaling alarms and activating the main brakes if the moving block passes the programmable safety zone limit. The unit also provides speed and position monitoring for display on the system dashboard, in addition to data logging for telemetry applications',
 	        		'specification' => [
 	        			'Dynapar HS35 series or similar',
 	        			'Custom adapter shaft included',
@@ -149,7 +149,7 @@ return [
         		],
         		'Pump Flow Meter' => [
 	        		'image' => 'img/placeholder.png',
-	        		'description' => 'DESCRIPTION',
+	        		'description' => '',
 	        		'specification' => [
 	        			'GPI FLOMEC model G2 or equivalent',
 	        			'Industrial grade digital flow meter',
@@ -160,7 +160,7 @@ return [
         		],
         		'Pump / Accumulator Pressure Sensor' => [
 	        		'image' => 'img/placeholder.png',
-	        		'description' => 'DESCRIPTION',
+	        		'description' => '',
 	        		'specification' => [
 	        			'VIATRAN model 34A OR HONEYWELL model 440 or equivalent',
 	        			'Strain gauge 4-20mA output',
@@ -169,7 +169,7 @@ return [
         		],
         		'Wellhead Pressure Sensor' => [
 	        		'image' => 'img/placeholder.png',
-	        		'description' => 'DESCRIPTION',
+	        		'description' => '',
 	        		'specification' => [
 	        			'VIATRAN model 509 or Honeywell model 425 or equivalent',
 	        			'Strain gauge 4-20mA output',
@@ -179,7 +179,7 @@ return [
         		],
         		'Tank Level Sensor' => [
 	        		'image' => 'img/placeholder.png',
-	        		'description' => 'DESCRIPTION',
+	        		'description' => '',
 	        		'specification' => [
 	        			'Multiple technologies available incl. laser, ultrasonic, hydrostatic head, and floats',
 						'Selection is made upon tank survey'
@@ -187,7 +187,7 @@ return [
         		],
         		'B.O.P. Ram Sensor' => [
 	        		'image' => 'img/placeholder.png',
-	        		'description' => 'DESCRIPTION',
+	        		'description' => '',
 	        		'specification' => [
 	        			'Hardwired to local 12V/24V power',
 						'Custom mounting hardware available',

@@ -11,6 +11,7 @@
         <br>
         <div class="row">
             <div class="col-md-9">
+                <label>Description</label>
                 <p>{{$obj['description']}}</p>
                 <label>Specifications</label>
                 <ul>
