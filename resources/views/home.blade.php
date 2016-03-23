@@ -7,7 +7,7 @@
         <div class="col-md-10 col-md-offset-1">
             <img id="home-img" class="thumbnail" width="100%">
             <div id="home-img-text" class="home-img-overlay"></div>
-            <div class="home-img-subtext product-group-block">
+            <div class="home-text product-group-block">
                 <div class="well">
                     <h3>CANADIAN MADE OILFIELD DRILLING TECHNOLOGY</h3>
                     <strong>When there's no margin for error and so much at stake, Alert Systems insures everything goes right.</strong><br>
@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-    <div class="row home-adjust-position">
+    <div class="row">
         <div class="col-md-10 col-md-offset-1">
         <hr><br>
             @foreach(Config::get('config.products') as $name=>$value)
@@ -35,60 +35,19 @@
         </div>
     </div>
 </div>
-<style>
-#home-img-text{
-    margin: 30px;
-}
-</style>
 @endsection
 
 @section('script')
 <script type="text/javascript">
-    var $fileslist = [];
     $fileslist_temp = 
-        <?php
-            $dir = ('./img/display');
-            $array_of_files_temp = preg_grep('/^([^.])/', scandir($dir));;
-            // shuffle($array_of_files_temp);            /* uncomment this line to randomize */
-            $array_of_files= implode("\n", $array_of_files_temp);
-            $array_of_files_temp = json_encode($array_of_files);
-            echo ($array_of_files_temp);
-        ?>;
-    String.prototype.filename=function(extension){
-        var s= this.replace(/\\/g, '/');
-        s= s.substring(s.lastIndexOf('/')+ 1);
-        return extension? s.replace(/[?#].+$/, ''): s.split('.')[0];
-    }
-    function change_display_image(){
-        $fileslist = $fileslist_temp.split('\n');
-        var cur_file = $('#home-img').attr('src');
-        var next_file = '';
-        if (cur_file == undefined)
-            next_file = $fileslist[0];
-        else
-            next_file = $fileslist[($fileslist.indexOf(cur_file.filename(true)) + 1) % $fileslist.length];
-        $('#home-img').attr('src', "{{url('img/display')}}/" + next_file + "?1");
-        console.log(next_file);
-        $('#home-img').attr('height', '340');
-        var delay = next_file=='1.jpg'?5000:2000;
-        setTimeout(change_display_image, delay);
-        if (next_file=='1.jpg'){
-            $('#home-img-text').html('Safety and Efficiency<br>Keep us moving forward.');
-            $('#home-img-text').css('top', '-340px').css('float', 'left');
-
-        }
-        else{
-            $('#home-img-text').html('Prevent accidents and<br>maximize productivity');
-            $('#home-img-text').css('top', '-180px').css('float', 'right');
-        }
-
-    }
-    $(function() {
-        
-        change_display_image();
-    });
-          
-       
-
+    <?php
+        $dir = ('./img/display');
+        $array_of_files_temp = preg_grep('/^([^.])/', scandir($dir));;
+        // shuffle($array_of_files_temp);            /* uncomment this line to randomize */
+        $array_of_files= implode("\n", $array_of_files_temp);
+        $array_of_files_temp = json_encode($array_of_files);
+        echo ($array_of_files_temp);
+    ?>;
 </script>
+<script src="{{ url('js/home.js') }}"></script>
 @endsection
