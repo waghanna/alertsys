@@ -35,6 +35,11 @@
         </div>
     </div>
 </div>
+<style>
+#home-img-text{
+    margin: 30px;
+}
+</style>
 @endsection
 
 @section('script')
@@ -69,14 +74,12 @@
         setTimeout(change_display_image, delay);
         if (next_file=='1.jpg'){
             $('#home-img-text').html('Safety and Efficiency<br>Keep us moving forward.');
-            $('#home-img-text') .css('left', '10%')
-                                .css('top', '-320px');
+            $('#home-img-text').css('top', '-340px').css('float', 'left');
 
         }
         else{
             $('#home-img-text').html('Prevent accidents and<br>Maximize productivity');
-            $('#home-img-text') .css('left', '55%')
-                                .css('top', '-180px');
+            $('#home-img-text').css('top', '-180px').css('float', 'right');
         }
 
     }
