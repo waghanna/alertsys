@@ -78,7 +78,7 @@
 
         }
         else{
-            $('#home-img-text').html('Prevent accidents and<br>Maximize productivity');
+            $('#home-img-text').html('Prevent accidents and<br>maximize productivity');
             $('#home-img-text').css('top', '-180px').css('float', 'right');
         }
 
