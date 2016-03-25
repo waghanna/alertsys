@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/sitemap', function()
+{
+	$file = public_path(). "/sitemap.xml";
+	if (file_exists($file)) {
+    	$content = file_get_contents($file);
+    	return Response::make($content, 200, array('content-type'=>'application/xml'));
+	}
+});
+
 Route::group(['middleware' => 'web'], function () {
 	
 	Route::get('contact', function (){
