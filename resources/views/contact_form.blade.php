@@ -19,7 +19,7 @@
 				</ul>
 			@endif
 		@endif
-		<h5>{{ date('Y-m-d H:i:s') }}</h5>
+		<h4>{{ date('Y-m-d H:i:s') }}</h4>
 		{!! Form::open(['url' => 'contact_form', 'class' => 'form']) !!}
 		
 		{!! Form::hidden('location', url()->current(), ['id'=>'location']) !!}
