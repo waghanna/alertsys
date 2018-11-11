@@ -3,6 +3,7 @@
 
 	<div class="panel-heading text-center">
 		<h4><strong>Request a Quote or Send an Inquiry</strong></h4>
+		<h5>{{ date('Y-m-d H:i:s') }}</h5>
 	</div>
 
 	<div class="panel-body">
@@ -20,7 +21,7 @@
 		@endif
 		{!! Form::open(['url' => 'contact_form', 'class' => 'form']) !!}
 		
-		{!! Form::hidden('location', null, ['id'=>'location']) !!}
+		{!! Form::hidden('location', url()->current(), ['id'=>'location']) !!}
 
 		{!! Form::label('name', 'Name:', ['class' => 'control-label']) !!}
 		{!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
