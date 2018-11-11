@@ -27,6 +27,8 @@
 
 		{!! Form::label('email', 'Email:', ['class' => 'control-label']) !!}
 		{!! Form::text('email', old('email'), ['class' => 'form-control']) !!}
+		{!! Form::label('e-mail', 'E-mail:', ['class' => ['control-label','hidden']]) !!}
+		{!! Form::text('e-mail', null, ['class' => ['form-control','hidden']]) !!}
 
 		{!! Form::label('phone', 'Phone:', ['class' => 'control-label']) !!}
 		{!! Form::text('phone', old('phone'), ['class' => 'form-control']) !!}
