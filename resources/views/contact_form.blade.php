@@ -20,7 +20,7 @@
 		@endif
 		{!! Form::open(['url' => 'contact_form', 'class' => 'form']) !!}
 		
-		{!! Form::hidden('location', null, ['id'=>'location']) !!}
+		{!! Form::hidden('location', url()->current(), ['id'=>'location']) !!}
 
 		{!! Form::label('name', 'Name:', ['class' => 'control-label']) !!}
 		{!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
