@@ -14,7 +14,18 @@ class ContactController extends Controller
 	        'name' => 'required',
 	        'message' => 'required']);
 		$input = $request->all();
-		if ($validator->fails()){
+		$spam = $request->get('e-mail');
+		if ($spam){
+			if ($spam!='')
+				$spam = true;
+			else
+				$spam = false;
+		}
+		else{
+			$spam = false;
+		}
+
+		if ($validator->fails() || $spam){
 			return redirect()->back()
 						->withErrors($validator)
                         ->withInput();
