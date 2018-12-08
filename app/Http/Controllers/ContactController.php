@@ -16,13 +16,13 @@ class ContactController extends Controller
 		$input = $request->all();
 		$spam = $request->get('e-mail');
 		if ($spam){
-			if ($spam!='')
+			if ($spam!='e-mail')
 				$spam = true;
 			else
 				$spam = false;
 		}
 		else{
-			$spam = false;
+			$spam = true;
 		}
 
 		if ($validator->fails() || $spam){
