@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-12 panel" style="background-color: lightyellow; font-size: 1.5em;">
             <div class="col-md-6">
-	        	<h3 style="color:red;font-style:italic">We would be glad to help! Contact us for more product information and a free consultation.</h3>
+	        	<h3 style="color:red;font-style:italic">We would be glad to help! Let's talk about how we can collaborate and work together.</h3>
 	        	<hr>
 				<label>Phone:</label>
 				<p>Edmonton Office: 1-780-299-1174 / 1-780-908-1381</p>
